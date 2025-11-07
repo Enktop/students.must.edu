@@ -1,0 +1,63 @@
+.image-container {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	max-width: 400px; /* Дээд хэмжээ */
+}
+
+	.image-container img {
+		width: 100%;
+		height: auto;
+	}
+
+.text-overlay {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: clamp(14px, 4vw, 18px); /* Дэлгэцийн хэмжээнээс хамаарч уян хатан хэмжээ */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	white-space: nowrap;
+}
+
+.text-overlay1 {
+	position: absolute;
+	top: 61%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	font-size: clamp(12px, 4vw, 16px);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+	white-space: nowrap;
+}
+
+.text-overlay2,
+.text-overlay3 {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	font-size: clamp(14px, 4vw, 18px);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+	white-space: nowrap;
+}
+
+.text-overlay2 {
+	top: 70%;
+}
+
+.text-overlay3 {
+	top: 65%;
+}
+
+.text-overlay4 {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	font-size: clamp(20px, 5vw, 30px);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+	white-space: nowrap;
+}

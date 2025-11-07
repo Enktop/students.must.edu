@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!--[if gt IE 8]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+
+    <title>ШУТИС | Оюутан</title>
+    <link href="/Content/img/must.png" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="/Content/css/stylesheets.css" rel="stylesheet"/>
+<link href="/Content/mycss.css" rel="stylesheet"/>
+
+
+
+    <link rel="stylesheet" href="/Content/css/site.css" />
+    <!--[if lt IE 8]>
+        <link href="~/Content/css/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/Content/css/fullcalendar.print.css" media="print" />
+    
+    <script src="/Content/js/plugins/jquery/jquery-1.11.2.min.js"></script>
+
+
+</head>
+<body>
+    <style>
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /*background-color: rgba(0,0,0,0.5);*/ /* change if the mask should have another color then white */
+            background-color:rgba(118, 118, 118, 0.94) rgba(0, 0, 0, 0.3);
+            -moz-opacity: 0.3;
+            filter: alpha(opacity=30);
+            opacity: 0.3;
+            z-index: 10000; /* makes sure it stays on top */
+            height: 100%;
+        }
+
+        #status {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 50%; /* centers the loading animation horizontally one the screen */
+            top: 50%; /* centers the loading animation vertically one the screen */
+            background-image: url("/Content/img/loaders/c_loader.gif"); /* path to your loading animation */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: -100px 0 0 -100px; /* is width and height divided by two */
+        }
+
+        .row-form {
+            padding: 7px 16px;
+        }
+    </style>
+
+    
+ 
+   
+
+    
+
+    <div class="wrapper">
+
+<div class="header">
+    
+	<a class="logo" href="/" style="width:65%;"><img src="/Content/img/mustlogo.png" alt="ШУТИС" title="ШУТИС" class="img-responsive" /></a>
+    <ul class="header_menu">
+        <li class="list_icon"><a href="#">&nbsp;</a></li>
+        <li class="settings_icon">
+            <a href="#" class="link_themeSettings">&nbsp;</a>
+
+            <div id="themeSettings" class="popup">
+                <div class="head clearfix">
+                    <div class="arrow"></div>
+                    <span class="isw-settings"></span>
+                    <span class="name">Theme settings</span>
+                </div>
+                <div class="body settings">
+                    <div class="row">
+                        <div class="col-md-3"><strong>Style:</strong></div>
+                        <div class="col-md-9">
+                            <a class="styleExample tip active" title="Default style" data-style="">&nbsp;</a>
+                            <a class="styleExample silver tip" title="Silver style" data-style="silver">&nbsp;</a>
+                            <a class="styleExample dark tip" title="Dark style" data-style="dark">&nbsp;</a>
+                            <a class="styleExample marble tip" title="Marble style" data-style="marble">&nbsp;</a>
+                            <a class="styleExample red tip" title="Red style" data-style="red">&nbsp;</a>
+                            <a class="styleExample green tip" title="Green style" data-style="green">&nbsp;</a>
+                            <a class="styleExample lime tip" title="Lime style" data-style="lime">&nbsp;</a>
+                            <a class="styleExample purple tip" title="Purple style" data-style="purple">&nbsp;</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><strong>Background:</strong></div>
+                        <div class="col-md-9">
+                            <a class="bgExample tip active" title="Default" data-style="">&nbsp;</a>
+                            <a class="bgExample bgCube tip" title="Cubes" data-style="cube">&nbsp;</a>
+                            <a class="bgExample bghLine tip" title="Horizontal line" data-style="hline">&nbsp;</a>
+                            <a class="bgExample bgvLine tip" title="Vertical line" data-style="vline">&nbsp;</a>
+                            <a class="bgExample bgDots tip" title="Dots" data-style="dots">&nbsp;</a>
+                            <a class="bgExample bgCrosshatch tip" title="Crosshatch" data-style="crosshatch">&nbsp;</a>
+                            <a class="bgExample bgbCrosshatch tip" title="Big crosshatch" data-style="bcrosshatch">&nbsp;</a>
+                            <a class="bgExample bgGrid tip" title="Grid" data-style="grid">&nbsp;</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><strong>Fixed layout:</strong></div>
+                        <div class="col-md-9">
+                            <input type="checkbox" name="settings_fixed" value="1" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><strong>Hide menu:</strong></div>
+                        <div class="col-md-9">
+                            <input type="checkbox" name="settings_menu" value="1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <button class="btn btn-default link_themeSettings" type="button">Close</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="menu">
+    <div class="breadLine">
+        <div class="arrow"></div>
+        <div class="adminControl">
+            Сайн байна уу, Р.ЭНХБАЯР
+        </div>
+    </div>
+    
+<div class="admin">
+    <div class="image">
+        
+        <img src="/Student/GetImage?u021EE=B242341521" class="img-polaroid img-thumbnail" />
+       
+    </div>
+    <ul class="control">
+        <li><span class="glyphicon glyphicon-home"></span> <a href="#">B242341521</a> </li>
+        <li><span class="glyphicon glyphicon-lock"></span> <a href="/Home/ChangePassAction">Нууц үг солих</a> </li>
+        <li>
+<form action="/Login/LogOff" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="lF5j3ef0BzgzLEfxObxGCGgc0HVHPqExGAw1VpncjELQVOAoBxPZNJJ9EjG158eJTieqY0Wux9syYt1UnlfDxP7p6EVeBTJ-A-Q_0kn0a8U1" />                    <span class="glyphicon glyphicon-off"></span>
+                    <a href="javascript:document.getElementById('logoutForm').submit()">Гарах</a>
+</form>        </li>
+    </ul>
+    <div class="info">
+        <span id="ipaddress"></span>
+    </div>
+</div>
+
+
+
+    <ul class="navigation">
+        
+        <li>
+            <a href="/">
+                <span class="isw-grid"></span><span class="text">НҮҮР</span>
+            </a>
+        </li>
+        <li class="openable">
+            <a href="#">
+                <span class="isw-list"></span><span class="text">ОЮУТАН</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="/Student/InfoAction">
+                        <span class="glyphicon glyphicon-info-sign"></span><span class="text">Хувийн мэдээлэл</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Home/PlanAction">
+                        <span class="glyphicon glyphicon-calendar"></span><span class="text">Сургалтын төлөвлөгөө</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Home/PlanSemAction">
+                        <span class="glyphicon glyphicon-calendar"></span><span class="text" >Санал болгох сургалтын төлөвлөгөө</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Home/TulburAction">
+                        <span class="glyphicon glyphicon-check"></span><span class="text">Төлбөрийн мэдээлэл</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="/Home/DunUliralAction">
+                        <span class="glyphicon glyphicon-time"></span><span class="text">Сорил, явцын оноо</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Home/DunAction">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">Дүнгийн мэдээлэл</span>
+                    </a>
+                </li>
+                
+
+                
+                
+                
+                
+                
+					<li>
+                    <a href="/Stipend/UrgudulAction">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">Хичээл сонголтын хүсэлт</span>
+                    </a>
+					</li>
+					<li>
+                    <a href="/Home/ToirohAction">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">Төгсөгч оюутны тойрох хуудас</span>
+                    </a>
+					</li>
+					<!-- <li> -->
+                    <!-- <a href="/Student/Edit2021"> -->
+                        <!-- <span class="glyphicon glyphicon-list-alt"></span><span class="text">Хувийн мэдээллээ шинэчлэх</span> -->
+                    <!-- </a> -->
+					<!-- </li> -->
+					<li>
+                    <a href="/home/ShalgaltAction">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text"> <span style="color:red">E , U Шалгалтын хуваарь </span></span>
+                    </a>
+					</li>
+                </li>
+                <li>
+                    <a href="/Home/StipendAction">
+                        <span class="glyphicon glyphicon-tasks"></span><span class="text">Тэтгэлэг <span> 
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="openable">
+            <a href="#">
+                <span class="isw-list"></span><span class="text">ХИЧЭЭЛ</span>
+            </a>
+            <ul>
+
+                    <li>
+                        <a href="/Lesson/AddAction">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="text">
+                                
+                                Хичээл сонголт 1
+
+
+
+                                    <small style="color:red;">идэвхгүй</small>
+
+                            </span>
+                        </a>
+                    </li>
+                                    <li>
+                                        <a href="/Lesson/Songolt2">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="text">
+                                                Хичээл сонголт 2
+                                                    <small style="color:red;"> идэвхгүй </small>
+                                            </span>
+                                        </a>
+                                    </li>
+
+
+                <li>
+                    <a href="/Home/HuvaariAction">
+                        <span class="glyphicon glyphicon-chevron-right"></span><span class="text">Хичээлийн хуваарь</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Home/HuvaariPrintAction">
+                        <span class="glyphicon glyphicon-chevron-right"></span><span class="text">Хичээлийн хуваарь хэвлэх</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+		<li class="openable">
+            <a href="#">
+                <span class="isw-list"></span><span class="text">ТОДОРХОЙЛОЛТ</span>
+            </a>
+           <ul>
+					<li>
+                    <a href="/home/getQrCode">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">ТОДОРХОЙЛОЛТ-Монгол</span>
+                    </a>
+					</li>
+				    <li>
+                    <a href="/home/getQrCodeEng">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">ТОДОРХОЙЛОЛТ-Англи</span>
+                    </a>
+					</li>
+		    </ul>
+        
+        </li>
+		<li class="openable">
+            <a href="#">
+                <span class="isw-list"></span><span class="text" style="font-size: 10px;">СУРГАЛТЫН НЭГДСЭН ХУАНЛИ</span>
+            </a>
+           <ul>
+					<li>
+                    <a target="_blank" href="/Content/2025-2026.pdf">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">ӨДӨР</span>
+                    </a>
+					</li>
+				    <li>
+                    <a target="_blank" href="/Content/echneehuanli.pdf">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">ЦАГИЙН ЭЧНЭЭ</span>
+                    </a>
+					</li>
+					<li>
+                    <a target="_blank" href="/Content/oroihuanli.pdf">
+                        <span class="glyphicon glyphicon-list-alt"></span><span class="text">ЦАХИМ, ТАНХИМ ХОСОЛСОН/ОРОЙ/</span>
+                    </a>
+					</li>
+		    </ul>
+        
+        </li>
+
+		
+		<li class="">
+            <a target="_blank" href="/Login/lmsLogin">
+                <span class="isw-list"></span><span class="text" >ЦАХИМ СУРГАЛТ</span>
+            </a>
+        </li>
+		
+<!-- 		<li class="">
+            <a href="/Golomt/GolomtDebit">
+                <span class="isw-list"></span><span class="text" style="font-size: 9px;">ГОЛОМТ БАНКНЫ ALL-IN КАРТ ЗАХИАЛГА</span>
+            </a>
+       </li> -->
+		            
+		<li class="">
+            <a target="_blank" href="https://library.must.edu.mn/reservation/">
+                <span class="isw-list"></span><span class="text" style="font-size: 11px;">24 НОМЫН САНГИЙН ЗАХИАЛГА</span>
+            </a>
+        </li>
+		
+		<li class="">
+            <a target="_blank" href="https://unimis.must.edu.mn/map/">
+                <span class="isw-list"></span><span class="text" style="font-size: 11px;">ХИЧЭЭЛИЙН БАЙРНУУД</span>
+            </a>
+        </li>
+		
+		
+		
+<!-- 	    <li class="">
+            
+              <a href="/Stipend/DormitoryAction">
+                    <span class="isw-list"></span><span class="text" style="font-weight:bold" style="color:red">ОЮУТНЫ БАЙРНЫ БҮРТГЭЛ</span>
+                </a>
+        
+        </li> -->
+		
+
+        
+        
+
+    </ul>
+    <div class="dr"><span></span></div>
+
+    <div class="widget-fluid">
+        <div class="wBlock clearfix">
+            <div class="dSpace">
+                <h3>&nbsp;</h3>
+                <span class="number">
+                    VIII
+                </span>
+                <span><b>долоо хоног</b></span>
+            </div>
+            <div class="rSpace">
+                <h3>Хичээлийн жил</h3>
+                <span>&nbsp;</span>
+                <span style="text-align:center;">2025-2026</span> 
+
+ <span style="text-align:center;">Намар</span>            </div>
+        </div>
+    </div>
+    <div class="dr"><span></span></div>
+    <div class="widget-fluid">
+        <div id="menuDatepicker"></div>
+    </div>
+
+    <div class="dr"><span></span></div>
+</div>
+            <div class="content">
+                <div class="breadLine">
+                    <ul class="breadcrumb">
+
+                    </ul>
+                    <ul class="buttons">
+                         
+                        <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()"><span class="glyphicon glyphicon-off"></span><span class="text">Гарах</span></a>
+                        </li>
+                    </ul>
+                    <ul class="buttons"></ul>
+                </div>
+                <div class="workplace">
+                    
+
+
+ <!--    <div class="panel panel-info">
+        <div class="panel-body">
+            <p style="color:#335A85; font-size:16px;">
+    
+</div>
+</div> -->
+
+
+
+
+<!-- 	<div class="panel panel-info"> 
+     <div class="panel-body">
+       <p style="color:#335A85; font-size:16px;"> 
+             <b>
+			   <span>ШУТИС-ийн Хараа, сонсголын бэрхшээлтэй оюутнуудын анхааралд. <span style="color:red">Cудалгаанд идэвхтэй хамрагдана уу.<span><span>
+            <a href="https://student.must.edu.mn/Home/NoticeShow/157" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> 
+        </p> 
+     </div>
+    </div> -->
+	
+		<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span>Засгийн газрын тэтгэлэг (ЗГТ)-т хамрагдах хүсэлт гаргасан оюутнуудын анхааралд.<span> -->
+            <!-- <a href="https://student.must.edu.mn/Home/NoticeShow/159" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a>  -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div class="panel panel-info">  -->
+      <!-- <div class="panel-body"> -->
+	    <!-- <div style="color:red; text-align:center;"> -->
+         <!-- <a href="https://must.edu.mn/media/uploads/2025/08/13/920250606-199_-must-1.pdf" class="btn btn-primary" target="_blank">Бакалаврын сургалтын үйл ажиллагааг зохицуулах журам</a><br />           -->
+       <!-- </div> -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+
+ 
+ <div class="panel panel-info">
+    <div class="panel-body">
+        <p style="color:#335A85; font-size:16px;">
+		
+		    <b>
+               <span>
+			    Шинэ элсэгчид гэрээ байгуулах заавар &nbsp;&nbsp;&nbsp;</span>
+            </b> 
+            <a href="https://www.youtube.com/watch?v=m2pJNxVqiWQ&feature=youtu.be" class="btn btn-primary" target="_blank">3аавар</a>
+            <b>
+               <span style="color:red">
+			    Шинэ элсэгчид гэрээ байгуулах &nbsp;&nbsp;&nbsp;</span>
+            </b> 
+            <a href="/Home/EGeree" class="btn btn-primary">Гэрээ байгуулах</a>
+        </p>
+    </div>
+ </div>
+
+	<div class="panel panel-info"> 
+     <div class="panel-body">
+       <p style="color:#335A85; font-size:16px;"> 
+             <b>
+            <a href="https://student.must.edu.mn/Home/StudentCard" class="btn btn-primary" target="_blank">Оюутны цахим үнэмлэх</a> 
+        </p> 
+     </div>
+    </div>
+	
+
+
+
+<!-- <div class="panel panel-info">
+    <div class="panel-body">
+        <p style="color:#335A85; font-size:16px;">
+            <b>
+               <span style="color:red">
+			  ШУТИС-ийн хичээлийн байрнуудын байрлал   &nbsp;&nbsp;&nbsp;</span>
+            </b> 
+            <a href="https://unimis.must.edu.mn/map/" class="btn btn-primary">Дэлгэрэнгүй</a>
+        </p>
+    </div>
+ </div>
+ -->
+
+
+
+<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+               <!-- <span style="color:red"> -->
+			  <!-- Ахисан түвшний суралцагчдаас (магистрант, докторант) авах сэтгэл ханамжийн судалгаа   &nbsp;&nbsp;&nbsp;</span> -->
+            <!-- </b>  -->
+            <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSezUuqQ6vdCf9ZPL8p_zPA_ksK2CydO0vU6-QbmvczhyjIYNg/viewform" class="btn btn-primary">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+ <!-- </div> -->
+	
+	<!-- <div class="panel panel-info">
+    <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+
+			  <!-- <span style="color:red"> Дээд боловсролын байгууллагын 1-3 дугаар курсийн нийт суралцагчдаас авах судалгаа  &nbsp;&nbsp;&nbsp;</span> -->
+            <!-- </b>  -->
+            <!-- <a href="https://high.eec.mn/survey/signin/student" class="btn btn-primary">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">ШИНЭ ЭЛСЭГЧДИЙН ХИЧЭЭЛ СОНГОЛТ 2  /8-Р САРЫН 22-НЫ 17:00 ЦАГТ НЭЭГДЭНЭ./<span> -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+    <!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">2023-2024 ОНЫ НАМРЫН УЛИРЛЫН ХИЧЭЭЛ СОНГОЛТ 2 /8-Р САРЫН 23-НЫ ӨДРИЙН 09:00 ЦАГТ НЭЭГДЭНЭ./<span> -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+	
+	
+
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">Иргэнээр суралцахаар бүртгүүлэгчдийн анхааралд<span> -->
+            <!-- <a href="https://student.must.edu.mn/Home/NoticeShow/138" class="btn btn-primary">Дэлгэрэнгүй</a>  -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+<!-- 	<div class="panel panel-info"> 
+     <div class="panel-body">
+       <p style="color:#335A85; font-size:16px;"> 
+             <b>
+			   <span style="color:red">Оюутны ёс зүйн дүрэм<span>
+            <a href="https://www.youtube.com/watch?v=ty6ET6ZIkR8" class="btn btn-primary">Дэлгэрэнгүй</a> 
+        </p> 
+     </div>
+    </div> -->
+
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">Эрт илрүүлэг, ЭМД-ын судалгаа<span> -->
+            <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdp1DF55x6ujiyVZm5O9lowYz2T4mnxuF3DXkT61iMfkSdrEg/viewform?vc=0&c=0&w=1&flr=0&pli=1" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a>  -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">2022-2023 Оны Өвлийн улирлын элсэгчдэд<span> -->
+            <!-- <a href="https://student.must.edu.mn/Home/Zarlal" class="btn btn-primary">Дэлгэрэнгүй</a>  -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+<!-- 		<div class="panel panel-info"> 
+     <div class="panel-body">
+       <p style="color:#335A85; font-size:16px;"> 
+             <b>
+			   <span style="color:red">1-р Курсын оюутнуудын анхааралд хичээл сонголт хийх тусламж.<span>
+			<a href="~/Content/tuslamj2021.pdf" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a>
+        </p> 
+     </div>
+    </div> -->
+
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">Нийт оюутны анхааралд . Боловсролын зээлийн сангийн оюутны хөгжлийн зээлийн 2022<span> -->
+            <!-- <a href="https://student.must.edu.mn/Home/NoticeShow/81" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a>  -->
+			<!-- <a href="~/Content/anket.pdf" class="btn btn-primary" target="_blank">Бүртгэлийн анкет татах</a> -->
+			<!-- <a href="~/Content/essay.pdf" class="btn btn-primary" target="_blank">Эсээний загвар татах</a> -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">ШУТИС-ийн оюутнуудын Эрүүл Мэндийн Даатгал төлөлт болон Эрт илрүүлэг, үзлэг шинжилгээнд хамрагдсан байдлын судалгаанд идэвхитэй оролцоно уу.<span> -->
+            <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScElaS93txtpvrggIKUj9iyLz7sFQPh50khvHS_nGyfqHYTFQ/viewform" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a>  -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	
+
+
+
+	
+	<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+              <!-- <span style="color:red">ЭНЭ УЛИРЛЫН E, U-ИЙН ШАЛГАЛТЫН ЗАХИАЛГА АВЧ БАЙНА. СУРГАЛТЫН АЛБА / 04 САРЫН 10-21-НИЙ ӨДРҮҮДЭД/</span> -->
+            <!-- </b>  -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <!-- <b> --> 
+                <!-- <!-- 1-р Курсын оюутнуудын анхааралд тухайн мэргэжлийн зөвлөх багштай холбогдож зөвлөгөө авна уу.</span>  --> 
+            <!-- <!-- </b>  --> 
+            <!-- <a href="~/Home/TeacherAction" class="btn btn-primary" target="_blank">ЗӨВЛӨХ БАГШИЙН МЭДЭЭЛЭЛ ХАРАХ</a><sup><span style="color:red">шинэ</span></sup> &nbsp;&nbsp;&nbsp; -->
+			
+			<!--  -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div>	 -->
+    <!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+               <!-- <span style="color:red">ЭХС - ийн Оюутнуудын анхааралд</span> &nbsp;&nbsp;&nbsp; -->
+            <!-- </b>  -->
+            <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScRm4rLto6XNIc_pA1HAz4wM_CYL5eiGYFAyGMxnbGswrjdJg/viewform" class="btn btn-primary" target="_blank">Судалгааг бөглөнө үү</a>  -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">СУДЛААЧ МАГИСТРААР ТӨГСӨХ МАГИСТРАНТ ӨӨРИЙН СУДАЛГААНЫ АЖЛЫН ХУУЛБАРЛАЛТЫГ И-МЕЙЛ ХАЯГААР ИРСЭН ХОЛБООС, НУУЦ ҮГИЙГ АШИГЛАН ШАЛГАЖ, ДИПЛОМ ХАМГААЛАЛТАНД ОРНО. ТА БҮХЭН ӨӨРИЙН МЭДЭЭЛЭЛ /И-МЕЙЛ ХАЯГ, ГАР УТАС/-ИЙГ ШАЛГАН, ШИНЭЧЛЭН ХАДГАЛАХ ТОВЧЛУУРЫГ ДАРНА УУ. ХУГАЦАА 5-Р САРЫН 1 ХҮРТЭЛ.</span> -->
+            
+            <!-- <a href="~/Student/Edit2021" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a>  -->
+        <!-- </p>  -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+<!-- 	<div class="panel panel-info"> 
+    <div class="panel-body"> 
+         <p style="color:#335A85; font-size:16px;">		
+			 <b> 
+                <span style="color:red">МАГИСТР, ДОКТОР Оюутнуудын анхааралд "Судалгааны ажлын сэдвийн санал (ЭЗХЯ-наас)"</span>  
+             </b>  
+             <a href="~/Content/master.pdf" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> 
+         </p>
+    </div>
+    </div> -->
+	
+		
+	<div class="panel panel-info">
+    <div class="panel-body">
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+              <!-- Судалгааны гол зорилго: оюутнуудын зөөлөн ур чадварыг илрүүлэхэд оршино. Энэхүү судалгаанд оролцогчдын и-мэйл хаягийг судалгаанд дурдахгүй. &nbsp;&nbsp;&nbsp; -->
+            <!-- </b>  -->
+     <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMPArcudglvcvfbexp0b5KHBOBtwiLE2tc7wU1BNT_FI0rPg/viewform?fbclid=IwAR020DcvNtuf9XctBFCu6XxdUo6VRsASMkFKA8QXCG_e0CgN0AOTHaGuFPc" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+  <!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+                <!-- Хичээл сонголтын хүсэлт<sup><span style="color:red">шинэ</span></sup> &nbsp;&nbsp;&nbsp; -->
+            <!-- </b>  -->
+            <!-- <a href="~/Stipend/UrgudulAction" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div class="panel panel-info"> -->
+        <!-- <div class="panel-body"> -->
+            <!-- <p style="font-size: 14px; font-weight:bold; color:#335A85"> -->
+                <!-- КОВИД-19 ХАЛДВАРТ ӨВЧНИЙ ТАНДАЛТЫН АСУУМЖ ХУУДАС &nbsp;&nbsp;&nbsp; -->
+               <!-- <a href="/Stipend/CovidAction" <button type="button" class="btn btn-danger" target="_blank">ЭНД ДАРНА УУ</button> </a> -->
+            <!-- </p> -->
+        <!-- </div> -->
+    <!-- </div> -->
+	
+	
+	
+
+	<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+                <!-- Төгсөгч оюутны тойрох хуудас -->
+            <!-- </b>  -->
+            <!-- <a href="~/Home/ToirohAction" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+	 
+	<!-- <div class="panel panel-info">  -->
+     <!-- <div class="panel-body"> -->
+       <!-- <p style="color:#335A85; font-size:16px;">  -->
+             <!-- <b> -->
+			   <!-- <span style="color:red">1-Р КУРСЫН ОЮУТНУУДАД ХУВИЙН МЭДЭЭЛЛЭЭ ШИНЭЧЛЭХ<span> -->
+            <!-- <a href="~/Student/Edit" class="btn btn-primary">Дэлгэрэнгүй</a>  -->
+        <!-- </p>  -->
+     <!-- </div> -->
+    <!-- </div> -->
+	 
+	<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+               <!-- <span style="color:red">БҮТЭЭЛИЙН ХУУЛБАРЛАЛТ ШАЛГАХ - </span> &nbsp;&nbsp;&nbsp; -->
+            <!-- </b>  -->
+            <!-- <a href="https://www.must.edu.mn/mn/event/10064" class="btn btn-primary" target="_blank">Түр журам</a> -->
+			<!-- <a href="~/Content/Negtgel.jpg" class="btn btn-primary" target="_blank">Шалгах зааварчилгаа</a>  -->
+			<!-- <a href="~/Content/Handbook2022.pdf" class="btn btn-primary" target="_blank">Программын гарын авлага</a>  -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;">			 -->
+			<!-- <b> -->
+                <!-- <span style="color:red">ШУТИС-ийн оюутнуудыг эрүүл мэндийн даатгалд хамруулах удирдамж</span>  -->
+            <!-- </b>  -->
+             <!-- <a href="~/Content/EMD2023.pdf" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+  <!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;">			 -->
+			<!-- <b> -->
+                <!-- <span style="color:red">1-р курсийн оюутнуудад сонголт -1 хийх зааварчилгаа</span>  -->
+            <!-- </b>  -->
+             <!-- <a href="~/Content/tuslamj2021.pdf" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+                <!-- 2021-2022 оны хичээлийн жилд мөрдөх ШУТИС-ийн сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн данс -->
+            <!-- </b>  -->
+            <!-- <a href="https://www.must.edu.mn/mn/news/9608" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+	
+<!-- 	 -->
+	
+
+	
+   <div class="panel panel-info">
+    <div class="panel-body">
+        <p style="color:#335A85; font-size:16px;">
+            <b>
+
+			    Microsoft Teams хаяг &nbsp;&nbsp;&nbsp;
+            </b> 
+            <a href="/Home/U021EmailAction" class="btn btn-primary">Дэлгэрэнгүй</a>
+        </p>
+    </div>
+    </div>
+	
+
+
+<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:#335A85; font-size:16px;"> -->
+            <!-- <b> -->
+                <!-- Өндөржүүлсэн бэлэн байдлын үед сургалтын үйл ажиллагааны оюутан суралцагчдад өгөх зөвлөмж &nbsp;&nbsp;&nbsp; -->
+            <!-- </b>  -->
+            <!-- <a href="~/Content/img/2021.01.26.jpg" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+	
+<!-- <div class="panel panel-info"> -->
+    <!-- <div class="panel-body"> -->
+        <!-- <p style="color:red; font-size:16px;"> -->
+            <!-- <b> -->
+               <!-- ШУТТНС-ИЙН 24 ЦАГИЙН УНШЛАГЫН ТАНХИМЫН ЗАХИАЛГА &nbsp;&nbsp;&nbsp; -->
+            <!-- </b>  -->
+     <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-CZB4ahN9sg0E9PNMnQT94GmdaBs0fOwlvp3qAhOIAIeV7Q/viewform" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> -->
+        <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- <div class="dialog" id="b_popup_gpa" style="display: none;" title="Modal"> -->
+    <!-- <div class="alert alert-danger alert-block"> -->
+        <!-- Таны үнэлгээний голч дүн 0.7-с бага байгааг анхаарна уу! -->
+    <!-- </div> -->
+<!-- </div>   -->
+
+
+<div class="row">
+    
+
+    <div class="col-md-6">
+        <div class="block-fluid ucard">
+            <div class="info">
+                <ul class="rows">
+                    <li class="heading">Оюутны товч мэдээлэл</li>
+                    <li>
+                        <div class="title">Сургууль:</div>
+                        <div class="text">Механик инженер, тээврийн сургууль</div>
+                    </li>
+                    <li>
+                        <div class="title">Салбар тэнхим:</div>
+                        <div class="text">Механик, мехатроникийн тэнхим </div>
+                    </li>
+                    <li>
+                        <div class="title">Мэргэжил:</div>
+                        <div class="text">D071501000000002305</div>
+
+                        <div class="text">МЕХАНИК ИНЖЕНЕРЧЛЭЛ</div>
+                    </li>
+                    <li>
+                        <div class="title">Оюутны код:</div>
+                        <div class="text">B242341521</div>
+                    </li>
+                    <li>
+                        <div class="title">Нэр:</div>
+                        <div class="text">Р.ЭНХБАЯР</div>
+                    </li>
+                    <li>
+                        <div class="title">Регистр:</div>
+                        <div class="text">УК06310397</div>
+                    </li>
+
+                    <li>
+                        <div class="title">Нийт кредит:</div>
+                        <div class="text">27</div>
+                    </li>
+                    <li>
+                        <div class="title">ҮГД:</div>
+                        <div class="text">0.61</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+<div class="block-fluid ucard">
+    <div class="info">
+        <ul class="rows">
+            <li class="heading">Үнэлгээний голч дүн улирлаар</li>
+        </ul>
+        <div class="block-fluid">
+            <div id="container" style="margin: 0 auto; font-family:Arial, Helvetica, sans-serif;"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var series = new Array();
+                var xAsis = new Array();
+                $.ajax({
+                    url: "/Home/GpaChart",
+                    dataType: "json",
+                    type: "GET",
+                    contentType: 'application/json; charset=utf-8',
+                    async: false,
+                    processData: false,
+                    cache: false,
+                    delay: 15,
+                    success: function (data) {
+                        for (var i in data) {
+                            var serie = new Array(data[i].Value, data[i].Item);
+                            series.push(data[i].Item);
+                            xAsis.push(data[i].Value);
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('error');
+                    }
+                });
+
+    $(function () {
+        Highcharts.setOptions({
+            chart: {
+                style: {
+                    fontFamily: 'Arial, Helvetica, sans-serif',
+                    
+                },
+                //backgroundColor: 'rgba(255, 128, 128, 0.1)',
+            }
+        });
+
+        $('#container').highcharts({
+            title: {
+                style: {
+                    fontFamily: 'Arial, Helvetica, sans-serif',
+                    fontSize: 12
+                },
+                text: '',
+                x: -20, //center
+            },
+
+            xAxis: {
+                categories: xAsis,
+                title: {
+                    text: 'Хичээлийн жил, улирал'
+                },
+            },
+            yAxis: {
+                tickPositions: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4],
+                title: {
+                    text: 'Чанарын оноо'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1
+                }]
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'ҮГД',
+                data: series,
+                zones: [{
+                    value: 2.0,
+                    color: '#E38585'
+                }, {
+                    value: 2.8,
+                    color: '#7cb5ec'
+                }, {
+                    color: '#55EE35'
+                }]
+            }]
+        });
+    });
+
+</script>
+
+
+
+
+
+
+
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <div class="block-fluid without-head">
+            <div class="head clearfix">
+                <h1>Голч дүнгийн жагсаалт таны суралцаж буй курсын хувьд:</h1>
+            </div>
+            <div class="toolbar clearfix" style="padding-bottom:20px;">
+
+                    <div class="col-md-4 clearfix" style="margin-top:10px;">
+                        <div class="headInfo clearfix">
+                            <div class="col-md-4 clearfix" style="margin-top:10px;">
+                                <ul class="control" style="width:200px;">
+
+                                    <li class="heading">Та ШУТИС - ийн хэмжээнд</li>
+                                    <li>
+                                        <div class="text"><span style="color:red">3140</span> - д жагсаж байна</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix" style="margin-top:10px;">
+                        <div class="headInfo clearfix">
+                            <div class="col-md-4 clearfix" style="margin-top:10px;">
+                                <ul class="control" style="width:200px;">
+
+                                    <li class="heading">Та МИТС - ийн хэмжээнд</li>
+                                    <li>
+                                        <div class="text"><span style="color:red">339</span> - д жагсаж байна</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 clearfix" style="margin-top:10px;">
+                        <div class="headInfo clearfix">
+                            <div class="col-md-4 clearfix" style="margin-top:10px;">
+                                <ul class="control" style="width:200px;">
+
+                                    <li class="heading">Та МЕХАНИК ИНЖЕНЕРЧЛЭЛ - ийн хэмжээнд</li>
+                                    <li>
+                                        <div class="text"><span style="color:red">76</span> - д жагсаж байна</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+        <div class="block-fluid ucard">
+            <div class="info">
+                <ul class="rows">
+                    <li class="heading">Оюутны ёс зүйн дүрэм</li>
+                </ul>
+                <div class="block news ">
+                    
+                    <div class="item">
+                        <p><iframe width="100%" height="490px" style="border: none;" src="/Content/Yoszuindurem.pdf"></iframe></p>
+                            <div class="controls">
+                                <a href="/Content/Yoszuindurem.pdf" class="btn btn-default btn-sm small" target="_blank">Дэлгэрэнгүй...</a>
+                            </div>
+                    </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="col-md-6">
+
+
+
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <div class="block-fluid without-head">
+            <div class="head clearfix">
+                <div class="isw-right_circle"></div>
+                <h1>Зөвлөх багшийн мэдээлэл</h1>
+            </div>
+            <div class="toolbar clearfix" style="padding-bottom:20px;">
+
+                    <div class="col-md-4 clearfix" style="margin-top:10px;">
+                        <div class="headInfo clearfix">
+                            <div class="image">
+                                <img src="/Home/GetImage?u41EE=G.MP21" height="100" alt="Зураг" class="img-rounded" />
+                            </div>
+                            <ul class="control" style="width:200px;">
+                                <li> G.MP21</li>
+                                <li><span class="glyphicon glyphicon-user"></span> <b>ЖАВХЛАН.Б</b> </li>
+                                <li><span class="glyphicon glyphicon-envelope"></span> Javhaa@must.edu.mn</li>
+                                <li><span class="glyphicon glyphicon-map-marker"></span> ШУТИС,Мех.ТС</li>
+                                <li><span class="glyphicon glyphicon-phone-alt"></span> 99158226</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        <div class="head clearfix">
+            <div class="isw-right_circle"></div>
+            <h1>Анхааруулга</h1>
+        </div>
+        <div class="block messaging">
+            <div class="itemIn">
+                <a href="#" class="image"><img src="/Content/img/users/default-user.png" class="img-thumbnail" /></a>
+                <div class="text">
+                    <div class="info clearfix">
+                        <span class="name">Оюутнуудын анхааралд</span>
+                        <span class="date"> 08/22/2016</span>
+                    </div>
+                    
+                    
+                    Сургалтын төлбөр төлөхдөө дараах форматын дагуу гүйлгээний утгыг оруулна уу. <br />
+                    <p style="color:red;">ST Оюутны код Регистр Овог Нэр Утас</p>
+                   
+                </div>
+                Жишээ:
+                <table cellpadding="-10" cellspacing="-10" width="100%" class="table" style="font-size:11px;">
+                    <thead>
+                        <tr>
+                            <th>Товч.Үг</th>
+                            <th>Оюутны код</th>
+                            <th>Регистр</th>
+                            <th>Эцэг /эх/-н нэр</th>
+                            <th>Нэр</th>
+                            <th>Утас</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ST</td>
+                            <td>A.AR13D999</td>
+                            <td>ФП99010595</td>
+                            <td>БОЛД</td>
+                            <td>БАЯРАА </td>
+                            <td>88608566</td>
+                        </tr>
+                        <tr>
+                            <td>ST</td>
+                            <td>B161058001</td>
+                            <td>ШР98090908</td>
+                            <td>ПҮРЭВ</td>
+                            <td>ЛХАГВА</td>
+                            <td>99159835</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          
+            <span class="name">Товчилсон үсгийн тайлбар</span>
+            <table cellpadding="0" cellspacing="0" width="100%" class="table" style="font-size:11px;">
+                <thead>
+                    <tr>
+                        <th>Товч.Үг</th>
+                        <th>Тайлбар</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ST</td>
+                        <td>СУРГАЛТЫН ТӨЛБӨР</td>
+                    </tr>
+                    <tr>
+                        <td>TD</td>
+                        <td>ОЮУТНЫ ТОДОРХОЙЛОЛТ</td>
+                    </tr>
+                    <tr>
+                        <td>U</td>
+                        <td>КРЕДИТ ШУУД ТООЦОХ ШАЛГАЛТЫН ТӨЛБӨР</td>
+                    </tr>
+                    <tr>
+                        <td>E</td>
+                        <td>НӨХӨН ШАЛГАЛТЫН ТӨЛБӨР </td>
+                    </tr>
+                    <tr>
+                        <td>TR</td>
+                        <td>ТОРГУУЛЬ</td>
+                    </tr>
+                    <tr>
+                        <td>AD</td>
+                        <td>АЛДАНГИ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+<div class="block-fluid ucard">
+    <div class="info">
+        <ul class="rows">
+            <li class="heading">Тэтгэлэг </li>
+        </ul>
+        <div class="block-fluid">
+            <table class="table">
+                <tr>
+                    <th>
+                       Нэр
+                    </th>
+                    <th>
+                        Эхлэх
+                    </th>
+                    <th>
+                        Дуусах
+                    </th>
+                    <th></th>
+                </tr>
+
+                    <tr>
+                        <td>
+                            2024-2025 оны B улирлын Төгсөгч оюутны анкет
+                        </td>
+                        <td>
+                            4/23/2025
+                        </td>
+                        <td>
+                            6/13/2025
+                        </td>
+                        <td>
+                                <span class="label label-primary">Дууссан</span>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            2024-2025 оны намрын улирлын &quot;Шилдэг, тэргүүний төгсөгч&quot; анкет
+                        </td>
+                        <td>
+                            1/6/2025
+                        </td>
+                        <td>
+                            1/14/2025
+                        </td>
+                        <td>
+                                <span class="label label-primary">Дууссан</span>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            2024-2025 оны A улирлын Төгсөгч оюутны анкет
+                        </td>
+                        <td>
+                            12/9/2024
+                        </td>
+                        <td>
+                            12/31/2024
+                        </td>
+                        <td>
+                                <span class="label label-primary">Дууссан</span>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            2024-2025 оны хичээлийн Захирлын нэрэмжит “Элсэгч” оюутны тэтгэлэг
+                        </td>
+                        <td>
+                            8/23/2024
+                        </td>
+                        <td>
+                            8/31/2024
+                        </td>
+                        <td>
+                                <span class="label label-primary">Дууссан</span>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            2023-2024 оны хичээлийн жилийн хаврын улирлын Захирлын нэрэмжит &quot;Шилдэг, тэргүүний төгсөгч&quot; тэтгэлэг
+                        </td>
+                        <td>
+                            5/10/2024
+                        </td>
+                        <td>
+                            6/10/2024
+                        </td>
+                        <td>
+                                <span class="label label-primary">Дууссан</span>
+                        </td>
+                       
+                    </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="head clearfix">
+            <div class="isw-edit"></div>
+            <h1>Зарлал</h1>
+        </div>
+        <div class="block news scrollBox">
+            <div class="scroll" style="max-height: 550px;">
+                <div class="item">
+                    <a href="/Home/NoticeShow/178">ШУТИС-ийн бакалаврын оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">09/04/2025 14:11</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/178" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/177">ТЭСО Группийн нэрэмжит сургалтын төлбөрийн тэтгэлэгт хөтөлбөр 2025 </a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/28/2025 11:03</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/177" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/176">Нийт оютнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/25/2025 20:49</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/176" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/174">БЗС-ийн сургалтын төлбөрийн хөнгөлөлттэй зээлд 2025-2026 оны хичээлийн жилд анх удаа хамрагдах ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/22/2025 09:00</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/174" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/175">БЗС-ийн сургалтын төлбөрийн хөнгөлөлттэй зээлд 2025-2026 оны хичээлийн жилд анх удаа хамрагдах ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/22/2025 09:00</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/175" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/173">2025-2026 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын бакалаврын сургалтын төлбөрийн&#160;нэг кредитийн үнэлгээ, төлбөрийн данс (өдрийн үндсэн хөтөлбөр, МУ-ын иргэн)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 17:09</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/173" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/172">2025-2026 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын магистрын хөтөлбөрийн&#160; сургалтын төлбөрийн&#160;нэг кредитийн үнэлгээ, төлбөрийн данс (өдрийн үндсэн хөтөлбөр, МУ-ын иргэн)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 17:03</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/172" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/171">&#160;2025-2026 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын докторын хөтөлбөрийн&#160; сургалтын төлбөрийн&#160;нэг кредитийн үнэлгээ, төлбөрийн данс (өдрийн үндсэн хөтөлбөр, МУ-ын иргэн)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:59</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/171" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/170">2025-2026 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын&#160; гаригийн болон эчнээ сургалт,&#160;гадаад хэл дээрх хөтөлбөр, гадаад хэл дээр заагдаж буй хичээлийн нэг кредитийн үнэлгээ, төлбөрийн данс (МУ-ын иргэн)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:51</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/170" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/169">ШУТИС-ийн суралцагчдад Боловсролын зээлийн сангаас олгох&#160;тэтгэлэг, зээл, буцалтгүй тусламж, дэмжлэг</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:45</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/169" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/168">БЗС-ийн буцалтгүй тусламжид 2025-2026 оны хичээлийн жилд&#160;&#160;анх удаа хамрагдах ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:38</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/168" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/167">БЗС-ийн сургалтын төлбөрийн хөнгөлөлттэй зээлд 2025-2026 оны хичээлийн жилд анх удаа хамрагдах ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:34</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/167" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/166">Багш, ажилтны хүүхдэд БЗС-аас үзүүлэх сургалтын төлбөрийн дэмжлэгт 2025-2026 оны хичээлийн жилд анх удаа хамрагдах&#160;ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:28</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/166" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/165">Зарим эрэлттэй мэргэжлийн тэтгэлэгт 2025-2026 оны хичээлийн жилд&#160;анх удаа хамрагдах ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:23</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/165" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/164">МУ-ын Засгийн газрын тэтгэлэгт 2025-2026 оны хичээлийн жилд анх удаа&#160;хамрагдах ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:20</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/164" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/163">Засгийн газар хоорондын тэтгэлэгт 2025-2026 оны хичээлийн жилд анх удаа хамрагдах &#160;ШУТИС-д суралцагч гадаадын иргэний анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 16:06</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/163" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/162">БЗС-ийн сургалтын төлбөрийн хөнгөлөлтөд 2025-2026 оны хичээлийн жилд анх удаа &#160;хамрагдах ШУТИС-ийн салбар Дархан-Уул аймаг дахь Технологийн сургууль, харьяа Эрдэнэт цогцолбор дээд сургууль, Өмнөговь аймаг дахь Технологийн дээд сургууль зэрэг орон нутагт үйл ажиллагаа явуулж байгаа сургуулиудад суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/18/2025 15:59</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/162" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/161">Тусгай&#160; хэрэгцээт суралцагчдын анхааралд </a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">05/22/2025 18:38</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/161" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/160">&quot;Харилцааны англи хэл&quot; хичээлээр B1 түвшний шаардлага хангаагүй E үнэлгээтэй оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">05/06/2025 14:32</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/160" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/159">Засгийн газрын тэтгэлэг (ЗГТ)-т хамрагдах хүсэлт гаргасан оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">04/23/2025 17:53</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/159" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/158">Докторант оюутан та санал асуулгад идэвхтэй оролцоно уу!</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">03/20/2025 17:53</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/158" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/157">ШУТИС-ийн Хараа, сонсголын бэрхшээлтэй оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">03/17/2025 11:45</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/157" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/156">&quot;ОЮУТАН ЦЭРЭГ&quot; ЦЭРГИЙН МЭРГЭЖИЛ ОЛГОХ СУРГАЛТЫН БҮРТГЭЛИЙГ СУНГАЛАА</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">03/13/2025 15:48</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/156" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/155">Боловсролын зээлийн сангийн санхүүжилтээр суралцах оюутнуудын анхааралд </a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/16/2025 10:34</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/155" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/154">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын бакалаврын сургалтын төлбөрийн нэг кредитийн үнэлгээ, төлбөрийн данс (өдрийн үндсэн хөтөлбөр, дотоодын иргэн)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/08/2025 16:07</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/154" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/153">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн магистрантын сургалтын төлбөрийн 1 кредитийн үнэлгээ, бүрэлдэхүүн сургуулиудын сургалтын төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/08/2025 16:05</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/153" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/152">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн докторантын сургалтын төлбөрийн 1 кредитийн үнэлгээ, бүрэлдэхүүн сургуулиудын сургалтын төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/08/2025 16:03</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/152" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/151">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын бакалаврын ЦАГИЙН (эчнээ, орой)  сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/08/2025 16:00</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/151" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/150">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн салбар Дархан-Уул аймаг дахь технологийн сургуулийн сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн данс (дотоодын иргэн)&#160;</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/08/2025 15:57</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/150" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/149">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн харьяа сургуулиудын бакалаврын сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/08/2025 15:53</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/149" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/148">Засгийн газрын тэтгэлгийн гэрээ</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">12/13/2024 10:55</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/148" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/147">ДОТООДЫН ДЭЭД БОЛОВСРОЛЫН СУРГАЛТЫН БАЙГУУЛЛАГАД СУРАЛЦАГЧИД ТЭТГЭЛЭГ ОЛГОХ ГЭРЭЭ</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">12/11/2024 14:42</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/147" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/146">Засгийн газрын тэтгэлэгт хамрагдах хүсэлтийн маягтыг татаж авах линк</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">12/02/2024 17:50</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/146" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/145">Засгийн газрын тэтгэлгийн хүсэлт, баримт хүлээн авна</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">11/29/2024 15:22</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/145" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/144">Засгийн газрын тэтгэлгийн хүсэлт, баримт хүлээн авна</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">11/29/2024 12:39</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/144" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/143">“Work – Scholarship”&#160;хөтөлбөр зарлагдлаа</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">11/29/2024 09:39</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/143" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/142">ШУТИС-ийн оюутан залуус та бүхэн эрүүл мэндийн эрт илрүүлэг, үзлэгтээ хамрагдана уу!!!</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">10/23/2024 10:08</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/142" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/141">“Их, дээд сургуулийн оюутнуудын суралцахуйн үр дүн, сэтгэл ханамжийн судалгаа”- 2024 олон улсын судалгаанд хамрагдах тухай </a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">10/17/2024 16:38</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/141" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/140">Японд дадлага хийх хүсэлтэй оюутнуудыг бүртгэж байна</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">10/14/2024 14:39</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/140" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/139">2025 оны зуны 7, 8 сард Япон Улсад хийх 3 долоо хоногийн дадлага ажлын танилцуулах уулзалт болно</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">10/02/2024 09:14</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/139" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/138">Иргэнээр суралцахаар бүртгүүлэгчдийн анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/23/2024 16:38</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/138" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/137">Бакалаврын оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/20/2024 17:01</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/137" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/136">Хөтөлбөрийн магадлан итгэмжлэл хүчин төгөлдөр хугацаатай, бакалаврын 48 хөтөлбөр  (2024.06.30-ны байдлаар)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2024 12:16</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/136" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/135">Магадлан итгэмжлэлтэй магистр, докторын хөтөлбөрийн жагсаалт</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2024 12:15</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/135" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/134">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын бакалаврын сургалтын  нэг кредитийн үнэлгээ, төлбөрийн данс (өдрийн анги, дотоодын иргэн)төлбөрийн </a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 13:27</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/134" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/133">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн бүрэлдэхүүн сургуулиудын бакалаврын ЦАГИЙН (эчнээ, орой)  сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 13:23</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/133" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/132">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн магистрантын сургалтын төлбөрийн 1 кредитийн үнэлгээ, бүрэлдэхүүн сургуулиудын сургалтын төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 13:21</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/132" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/131">2024-2025 оны хичээлийн жилд мөрдөх ШУТИС-ийн докторантын сургалтын төлбөрийн 1 кредитийн үнэлгээ, бүрэлдэхүүн сургуулиудын сургалтын төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 13:17</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/131" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/130">Боловсролын зээлийн сангийн сургалтын зээлд шинээр &#160;хамрагдах&#160;ШУТИС-ийн оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 13:10</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/130" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/129">ШУТИС-ийн бакалаврын магадлан итгэмжлэгдсэн тэргүүлэх, эрэлттэй мэргэжлийн суралцагчид Боловсролын зээлийн сангаас олгох сургалтын төлбөрийн дэмжлэг</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 13:06</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/129" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/128"> БЗС-ийн сургалтын төлбөрийн тэтгэлэгт хамрагдах   ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 13:02</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/128" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/127">БЗС-ийн сургалтын төлбөрийн тэтгэлэгт хамрагдах&#160;&#160;&#160;ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 12:57</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/127" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/126">  Засгийн газар хоорондын гэрээгээр ШУТИС-д суралцах гадаадын иргэнд  Боловсролын зээлийн сангаас олгох тэтгэлэг</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 12:55</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/126" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/125">Ахисан түвшний сургалтад дагалдан ажиллах Засгийн газрын  тэтгэлгээр  ШУТИС-д суралцах тухай</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/13/2024 12:53</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/125" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/124"> ЯПОН УЛСАД ИНЖЕНЕР ОЮУТАН ДАДЛАГАЖУУЛАХ ХӨТӨЛБӨР</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">05/27/2024 18:16</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/124" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/123">Монгол Улсын Засгийн газрын 2024 оны 3-р сарын 06-ны өдрийн 102, 103 дугаар журам</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">05/01/2024 16:18</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/123" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/122">Амжилттай &#160;суралцсан&#160; багш, ажилтны&#160;&#160;хүүхдэд сургалтын төлбөрийн тэтгэлэг олгох тухай</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">04/08/2024 09:39</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/122" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/121">ОЮУТНЫ “УНИВЕРСИАД” VI НААДАМ-д ШУТИС-ийг төлөөлөн оролцох тамирчдыг сонгон шалгаруулна.</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">03/01/2024 14:28</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/121" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/120">Хар тамхины талаарх мэдлэг, тархалтыг судлах асуумж судалгаа</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">02/26/2024 10:36</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/120" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/119">Зам зардлын санхүүжилт олгох тухай </a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">02/15/2024 15:43</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/119" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/118">Төрийн болон орон нутгийн өмчийн сургууль, цэцэрлэгт 15-аас доошгүй жил ажилласан багш, ажилтны эрэлттэй, тэргүүлэх мэргэжлээр суралцаж буй нэг хүүхдийг сургалтын төлбөрийг санхүүжүүлэхтэй холбоотой судалгаа</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/31/2024 15:00</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/118" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/117">Дээд боловсролын тэргүүлэх, эрэлттэй мэргэжлийн жагсаалт  ШУТИС</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/31/2024 15:00</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/117" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/116">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн бакалаврын сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн данс (өдрийн анги, МУ-ын иргэн)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/10/2024 09:22</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/116" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/115">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн магистрант, докторантын сургалтын төлбөрийн 1 кредитийн үнэлгээ, бүрэлдэхүүн сургуулиудын сургалтын төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/10/2024 09:17</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/115" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/114">2023 оны шилдэг клуб шагнал гардуулах арга хэмжээнд  оюутан суралцагч та бүхнийг хүрэлцэн ирэхийг урьж байна</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">12/25/2023 17:43</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/114" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/113">Оюутнуудын анхааралд!!!</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">12/15/2023 15:08</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/113" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/112">ШУТИС-ийн оюутнуудын шилдэг өгүүлэл шалгаруулах эрдэм шинижлгээний хурлын удирдамж</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">10/05/2023 16:31</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/112" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/111">Төгсөх курсийн оюутнуудад “Ажил эрхлэлтэд чиглүүлэх” сургалт зохион байгуулна.</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">10/05/2023 16:23</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/111" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/96">БЗС-ийн сургалтын төлбөрийн тэтгэлэгт шинээр  хамрагдах  ШУТИС-ийн суралцагчдын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/20/2023 12:15</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/96" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/102">БЗС-ийн тэтгэлгээр 2023-2024 оны хичээлийн жилийн намрын улиралд үргэлжлүүлэн суралцах оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/20/2023 12:13</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/102" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/95">БЗС-ийн “оюутны хөгжлийн зээл”-д шинээр  хамрагдах   ШУТИС-ийн бакалаврын оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/20/2023 12:02</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/95" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/94">БЗС-ийн “оюутны хөгжлийн зээл”-д шинээр  хамрагдах   ШУТИС-ийн  магистрант, докторантуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/20/2023 11:59</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/94" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/97"> БЗС-ийн сургалтын төлбөрийн зээлд 2023-2024 оны хичээлийн жилийн намрын улиралд үргэлжлүүлэн  хамрагдах оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/20/2023 11:57</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/97" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/110">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн бакалаврын сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн данс (өдрийн анги, МУ-ын иргэн)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2023 12:53</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/110" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/109">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн бакалаврын ЦАГИЙН (эчнээ, орой) сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2023 12:51</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/109" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/108">ШУТИС-ийн бакалаврын хөтөлбөрт суралцаж буй ГАДААДЫН иргэний 2023-2024 оны хичээлийн жилд мөрдөх сургалтын төлбөрийн нэг кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2023 12:49</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/108" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/107">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн харьяа сургуулиудын сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2023 12:47</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/107" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/106">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн магистрант, докторантын сургалтын төлбөрийн 1 кредитийн үнэлгээ, бүрэлдэхүүн сургуулиудын сургалтын төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2023 12:44</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/106" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/105">ШУТИС-ийн магистр, докторын хөтөлбөрт суралцагч гадаадын иргэний 2023-2024 оны хичээлийн жилд мөрдөх сургалтын төлбөрийн нэг кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/19/2023 11:52</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/105" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/93">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн бакалаврын ЦАГИЙН (эчнээ, орой) сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөр төлөх данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/16/2023 16:56</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/93" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/104">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн бакалаврын сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн  данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/14/2023 18:23</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/104" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/103">Дээд боловсролын эрэлттэй мэргэжлийн жагсаалт  ШУТИС</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/14/2023 17:41</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/103" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/99">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн харьяа сургуулиудын сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/11/2023 20:40</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/99" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/101">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн магистрант, докторантын сургалтын төлбөрийн 1 кредитийн үнэлгээ, бүрэлдэхүүн сургуулиудын сургалтын төлбөрийн данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/11/2023 20:39</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/101" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/100">2023-2024 оны хичээлийн жилд мөрдөх ШУТИС-ийн бакалаврын сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн  данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/11/2023 20:39</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/100" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/98">Дээд боловсролын тэргүүлэх мэргэжлийн чиглэл ШУТИС</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">08/11/2023 20:32</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/98" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/92">Нийт оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">05/08/2023 09:47</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/92" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/91">Тэргүүлэх болон эрэлттэй мэргэжлээр суралцаж буй оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">04/18/2023 17:26</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/91" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/88">2022-2023 оны хичээлийн жилд мөрдөх ШУТИС-ийн сургалтын төлбөрийн 1 кредитийн үнэлгээ, төлбөрийн  данс</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">03/02/2023 10:24</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/88" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/90">Замын зардал авах оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">02/13/2023 16:52</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/90" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/89">Зам зардал нөхөн авах оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/25/2023 16:03</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/89" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/83">Монгол улсад шаардлагатай тэргүүлэх чиглэлийн мэргэжлийн жагсаалтаас (ШУТИС: тэргүүлэх чиглэлийн хөтөлбөрүүд)</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/20/2023 17:29</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/83" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/87">Боловсролын зээлийн сангийн тэтгэлэгт шинээр хамрагдах тухай</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/20/2023 17:28</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/87" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/86">Боловсролын зээлийн сангийн сургалтын төлбөрийн зээлд шинээр хамрагдах ШУТИС-ийн оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/20/2023 17:28</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/86" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/85">Боловсролын зээлийн сангийн сургалтын төлбөрийн тэтгэлгээр үргэлжлүүлэн суралцах оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/20/2023 17:27</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/85" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/84">БЗС-ийн сургалтын төлбөрийн зээлд үргэлжлүүлэн хамрагдах оюутнуудын анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">01/20/2023 17:27</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/84" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/82">2022-2023 оны намрын улирлын шалгалттай холбоотой өргөдөл, гомдол</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">12/23/2022 11:39</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/82" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/80">2022/23А улиралд E, U шалгалт өгөх оюутны захиалгыг бүрэлдэхүүн сургуулийн сургалтын алба 11 дүгээр сарын 1-нээс 12 дугаар сарын 02-ны өдрүүдэд авна. </a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">11/01/2022 00:00</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/80" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/79">&quot;Тэмдэглэл хөтлөгч&quot; үйлчилгээний тухай</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">10/04/2022 00:00</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/79" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/25">ОЮУТНЫ САНААЧИЛГЫГ ДЭМЖИХ ӨРСӨЛДӨӨНТ ТЭТГЭЛГИЙН ЗАРЛАЛ</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">12/07/2018 10:57</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/25" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/23">2018-2019 оны намрын улралд төгсөх оюутны анхааралд</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">11/19/2018 11:32</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/23" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/21">GCR Mongolia компанийн нэрэмжит тэтгэлэг</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">11/19/2018 11:26</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/21" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+                <div class="item">
+                    <a href="/Home/NoticeShow/2">Шинжлэх ухаан технологийн их сургуулийн Захирлын нэрэмжит тэтгэлэг</a>
+                    <p>
+                        &nbsp;
+                    </p>
+                   
+                    <span class="date">02/08/2018 12:34</span>
+                    <div class="controls">
+                        <a href="/Home/NoticeShow/2" class="btn btn-default btn-sm small">Дэлгэрэнгүй...</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>     
+    </div>
+
+</div>
+    
+<!-- <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                           <p style="color:#335A85; font-size:16px;"> 
+             <b>
+			   <span style="color:red">“Work – Scholarship” хөтөлбөр зарлагдлаа<span>
+            <a href="https://student.must.edu.mn/Home/NoticeShow/143" class="btn btn-primary" target="_blank">Дэлгэрэнгүй</a> 
+        </p> 
+                </div>
+            </div>
+        </div>
+    </div> -->
+	
+<!-- 	<div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="/Content/zurag.jpg" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div> -->
+	
+		<!-- <div id="myModal" class="modal fade"> -->
+        <!-- <div class="modal-dialog"> -->
+            <!-- <div class="modal-content"> -->
+                <!-- <div class="modal-body"> -->
+                    <!-- <img src="/Content/last.jpg" class="img-responsive"> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+	
+<!-- 	<div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+					<img src="/Content/english.jpg" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div> -->
+	
+	<!-- <div id="myModal" class="modal fade"> -->
+        <!-- <div class="modal-dialog"> -->
+            <!-- <div class="modal-content"> -->
+                <!-- <div class="modal-body"> -->
+                    <!-- <img src="/Content/img/bichleg2022.mp4" class="img-responsive"> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+	
+	<!-- <div id="myModal" class="modal fade"> -->
+    <!-- <div class="modal-dialog"> -->
+        <!-- <div class="modal-content"> -->
+            <!-- <div class="modal-body"> -->
+                <!-- <video width="400" controls> -->
+                    <!-- <source src="/Content/img/bichleg2022.mp4" type="video/mp4"> -->
+                    <!-- <source src="/Content/img/bichleg2022.ogg" type="video/ogg">					 -->
+                <!-- </video> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+<!-- </div> -->
+
+<!-- <div id="myModal" class="modal fade"> -->
+    <!-- <div class="modal-dialog"> -->
+        <!-- <div class="modal-content"> -->
+            <!-- <div class="modal-body"> -->
+                <!-- <iframe width="100%" height="330" -->
+                        <!-- src="https://www.youtube.com/embed/C4RHlzoAbyo"> -->
+                <!-- </iframe> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+<!-- </div> -->
+
+
+
+
+
+                </div>
+            </div>
+        
+        
+                    
+    </div>
+
+    <script src="/Content/js/plugins/jquery/jquery-ui-1.10.1.custom.min.js"></script>
+<script src="/Content/js/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="/Content/js/plugins/jquery/jquery.mousewheel.min.js"></script>
+<script src="/Content/js/plugins/cookie/jquery.cookies.2.2.0.min.js"></script>
+<script src="/Content/js/plugins/bootstrap.min.js"></script>
+<script src="/Content/js/plugins/highcharts/highcharts.js"></script>
+<script src="/Content/js/plugins/highcharts/modules/exporting.js"></script>
+<script src="/Content/js/plugins/highcharts/highcharts-more.js"></script>
+<script src="/Content/js/plugins/highcharts/modules/data.js"></script>
+<script src="/Content/js/plugins/sparklines/jquery.sparkline.min.js"></script>
+<script src="/Content/js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="/Content/js/plugins/select2/select2.min.js"></script>
+<script src="/Content/js/plugins/uniform/uniform.js"></script>
+<script src="/Content/js/plugins/maskedinput/jquery.maskedinput-1.3.min.js"></script>
+<script src="/Content/js/plugins/validation/languages/jquery.validationEngine-mn.js"></script>
+<script src="/Content/js/plugins/validation/jquery.validationEngine.js"></script>
+<script src="/Content/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script src="/Content/js/plugins/animatedprogressbar/animated_progressbar.js"></script>
+<script src="/Content/js/plugins/qtip/jquery.qtip-1.0.0-rc3.min.js"></script>
+<script src="/Content/js/plugins/cleditor/jquery.cleditor.js"></script>
+<script src="/Content/js/plugins/dataTables/jquery.dataTables.min.js"></script>
+<script src="/Content/js/plugins/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/Content/js/plugins/stepywizard/jquery.stepy.js"></script>
+<script src="/Content/js/plugins/multiselect/jquery.multi-select.js"></script>
+<script src="/Content/js/plugins/pnotify/jquery.pnotify.min.js"></script>
+<script src="/Content/js/plugins/ibutton/jquery.ibutton.min.js"></script>
+<script src="/Content/js/plugins/scrollup/jquery.scrollUp.min.js"></script>
+<script src="/Content/js/cookies.js"></script>
+<script src="/Content/js/actions.js"></script>
+<script src="/Content/js/plugins.js"></script>
+<script src="/Content/js/settings.js"></script>
+
+    
+    <script type="text/javascript">
+        //var dd = $('#passLen').val();
+        //$('#b_popup_3').dialog({ autoOpen: true, modal: true });
+        //if (dd == 0) {
+        //    $('#b_popup_3').dialog({ autoOpen: true, modal: true });
+        //}
+        //$('#b_popup_3').dialog({ autoOpen: true, modal: true });
+        //$("#b_popup_gpa").dialog({ autoOpen: false, modal: true });
+    </script>
+
+    
+
+    
+    <script>
+        $(document).ready(function () {
+            $("#myModal").modal('show');
+        });
+    </script>
+
+
+    
+    <script>
+
+        //$(window).load(function () { // makes sure the whole site is loaded
+        //    $('#preloader').fadeOut('fast'); // will fade out the white DIV that covers the website.
+        //})
+
+        if (window.localStorage.getItem("openable") != null) {
+            var activeindex = window.localStorage.getItem("openable");
+            $('.openable:eq(' + (activeindex - 1) + ')').addClass("active");
+        }
+
+        $('.menu .openable').click(function () {
+            var self = $(this),
+                index = self.index();
+            window.localStorage.setItem("openable", index);
+        });
+
+        //$('a').live('click', function () {
+        //    dd = $(this).attr('href');
+        //    if (dd != '#') {
+        //        $('#preloader').fadeIn('fast');
+        //    }
+        //});
+
+        //function DisplayIP(response) {
+        //    document.getElementById("ipaddress").innerHTML = "Таны IP: " + response.ip;
+        ////}
+
+
+        //surveyCheck();
+        function surveyCheck() {
+
+            $.ajax({
+			    //url: "/Home/isCreateSurveyNFT",
+                //url: "/Home/isCreateSurvey",
+                //url: "/Stipend/IsCreateSurveyAll",
+                //url: "/Home/isCreateSurveyErdenet",
+                //url: "/Home/isCreateSurveyU",
+                //url: "/Home/IsCreateSurveyT",
+                url: "/Home/IsCreateSurveyA",
+                //url: "/Student/IsCreateEdit2021",
+                //url: "/Home/IsCreateSurveyB",
+                //url: "/Stipend/IsCreateSurveyVaccined",
+
+
+                dataType: "json",
+                type: "get",
+                error: function () {
+                    alert("Алдаа гарлаа");
+                },
+                success: function (data) {
+                    if (!data) {
+					    //window.location = '/Home/SurveyNFT';
+                        //window.location = '/Home/SurveyTP';
+                        //window.location = '/Home/Survey';
+                        //window.location = '/Home/Survey';
+                        //window.location = '/Home/SurveyU';
+                        //window.location = '/Home/SurveyT';
+                        window.location = '/Home/SurveyA';
+                        //window.location = '/Home/SurveyB';
+                        // window.location = '/Student/Edit2021';
+                        //window.location = '/Home/SurveyVac';
+                        //window.location = '/Stipend/SurveyVaccined';
+
+
+                    }
+                }
+            });
+        }
+
+        function CheckValidPassword() {
+
+            $.ajax({
+                url: "/Home/CheckValidPassword",
+                dataType: "json",
+                type: "get",
+                error: function () {
+                    alert("Алдаа гарлаа");
+                },
+                success: function (data) {
+                    if (!data) {
+                        window.location = '/Home/ChangePassAction';
+                    }
+                }
+            });
+        }
+
+
+
+
+        function CheckEmail() {
+            $.ajax({
+                url: "/Home/IsCheckEmail",
+                dataType: "json",
+                type: "get",
+                error: function () {
+                    alert("Алдаа гарлаа");
+                },
+                success: function (data) {
+                    if (!data) {
+                        window.location = '/Home/EmailChangeAction';
+                    }
+                }
+            });
+        }
+
+
+
+        $('#exampleModal').modal({
+            backdrop: 'static',
+            keyboard: false,
+            width: 'auto'
+        })
+
+        //surveyCheckGoogleForm();
+
+        function surveyCheckGoogleForm() {
+            $.ajax({
+                //url: "/Student/Edit2021",
+                //url: "/Home/IsCreateSurveyGoogleForm",
+                dataType: "json",
+            type: "get",
+            error: function () {
+                alert("Алдаа гарлаа1");
+            },
+            success: function (data) {
+                if (!data) {
+                    $('#exampleModal').modal('show');
+                } else {
+                    $('#exampleModal').modal('hide');
+                }
+            }
+        });
+        }
+
+        $('#exampleModal').on('hidden.bs.modal', function () {
+            $.ajax({
+                //url: "/Student/Edit2021",
+                //url: "/Home/CreateSurveyGoogleForm",
+                dataType: "json",
+            type: "get",
+            error: function () {
+                alert("Алдаа гарлаа1");
+            },
+            success: function (data) {
+                if (!data) {
+                    location.reload();
+                }
+            }
+        });
+        })
+    </script>
+    
+        <script>            
+            //CheckValidPassword();
+        </script>
+
+        <script>
+            //CheckEmail();
+        </script>
+
+</body>
+</html>
